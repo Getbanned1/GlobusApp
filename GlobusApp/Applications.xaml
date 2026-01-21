@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GlobusApp"
         mc:Ignorable="d"
+        d:DesignHeight="400"
         Title="Applications">
     <Grid>
         <Grid.RowDefinitions>
@@ -21,6 +22,7 @@
             <Button x:Name="AddApplication" Width="130" Height="30" Content="Добавить заявку" Margin="10,0,0,0" Click="AddClickButton_Click"></Button>
         </StackPanel>
         <ListView x:Name="ApplicationsView" Grid.Row="1"  SelectedItem="{Binding SelectedTour}" MouseDoubleClick="ApplicationsView_MouseDoubleClick">
+
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ID"

@@ -110,17 +110,17 @@ namespace GlobusApp
         {
             RecalculateTotalCost();
         }
-            private void RecalculateTotalCost()
-    {
-        if (TourComboBox.SelectedItem is Tour selectedTour && int.TryParse(NumberOfPeopleTextBox.Text, out int count))
+        private void RecalculateTotalCost()
         {
-            decimal total = selectedTour.Price * count;
-            TotalCostTextBlock.Text = total.ToString();
+            if (TourComboBox.SelectedItem is Tour selectedTour && int.TryParse(NumberOfPeopleTextBox.Text, out int count))
+            {
+                decimal total = selectedTour.Price * count;
+                TotalCostTextBlock.Text = total.ToString();
+            }
+            else
+            {
+                TotalCostTextBlock.Text = "0";
+            }
         }
-        else
-        {
-            TotalCostTextBlock.Text = "0";
-        }
-    }
     }
 }

@@ -16,7 +16,9 @@ namespace GlobusApp
             {
                 User user = context.Users.FirstOrDefault(u => u.Login == login && u.Password == password);
 
-                if (user == null) return null;
+                if (user == null) 
+                    
+                    return null;
 
                 return context.Roles.FirstOrDefault(r => r.Id == user.RoleId);
             }
